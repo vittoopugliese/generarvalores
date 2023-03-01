@@ -342,24 +342,32 @@ h6 {
   right: 15px;
 }
 
+.navbar-mobile {
+  background-color: rgba(0, 0, 0, 0.94);
+  width: 174px;
+}
 .navbar-mobile ul {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
   position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #fff;
-  overflow-y: auto;
+  margin-top: 54px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding: 12px 0;
+  overflow: hidden;
   transition: 0.3s;
+  width: 100%;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
-  font-size: 15px;
-  color: #191919;
+  font-size: 18px;
+  text-align: left !important;
+  color: white !important;
 }
 
 .navbar-mobile a:hover,
@@ -421,7 +429,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.64);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -483,8 +491,8 @@ h6 {
   }
 
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    /* font-size: 28px; */
+    line-height: 48px;
   }
 
   #hero h2 {
@@ -498,7 +506,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 54px 0;
   overflow: hidden;
 }
 
@@ -734,10 +742,10 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.74), rgba(0, 0, 0, 0.74)),
+  background: linear-gradient(rgba(2, 2, 2, 0.78), rgba(0, 0, 0, 0.78)),
     url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .cta h3 {
@@ -886,7 +894,6 @@ section {
 
 .portfolio-details .portfolio-details-slider img {
   width: 50%;
-  margin-left: 200px;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
@@ -1444,5 +1451,53 @@ section {
 @media (max-width: 575px) {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
+  }
+}
+@media (max-width: 384px) {
+  .in320text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 354px) {
+  .in320text {
+    font-size: 10px;
+  }
+
+  .logo {
+    font-size: 22px !important;
+  }
+
+  .imageOn320 {
+    width: 64% !important;
+  }
+
+  .padding0 {
+    padding: 12px;
+  }
+
+  .backtext {
+    display: none;
+  }
+
+  section {
+    padding: 18px 0;
+    overflow: hidden;
+  }
+
+  .cta h3 {
+    color: #fff;
+    filter: drop-shadow(2px 2px 36px rgba(255, 255, 255, 0.74));
+    font-size: 48px;
+  }
+
+  .cta {
+    padding: 54px 0;
+  }
+
+  .pon320 {
+    margin: 12px auto;
+    width: 84%;
+    font-size: 20px;
   }
 }
