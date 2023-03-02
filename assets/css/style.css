@@ -1453,7 +1453,7 @@ section {
     margin: -20px 0 30px 0;
   }
 }
-@media (max-width: 384px) {
+@media (max-width: 400px) {
   .in320text {
     font-size: 12px;
   }
