@@ -239,3 +239,8 @@
   });
 
 })()
+
+function toggleFinanciamiento(){
+  const f = document.querySelector('#ul-to-hide')
+  f.classList.toggle('ul-hidden')
+}
