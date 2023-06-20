@@ -11,7 +11,6 @@
    * Easy selector helper function
    */
   const select = (el, all = false) => {
-    el = el.trim()
     if (all) {
       return [...document.querySelectorAll(el)]
     } else {
@@ -244,3 +243,11 @@ function toggleFinanciamiento(){
   const f = document.querySelector('#ul-to-hide')
   f.classList.toggle('ul-hidden')
 }
+
+const colorInput = document.querySelector('#colorInput');
+
+colorInput.addEventListener('input', (event) => {
+  const colorValue = event.target.value;
+  document.documentElement.style.setProperty('--main', colorValue);
+});
+

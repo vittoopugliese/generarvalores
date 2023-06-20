@@ -3,18 +3,23 @@ body {
   color: #444444;
 }
 
+:root {
+  --main: #cc1616;
+  --sec: #cc1616;
+}
+
 *::selection {
   background-color: #444444;
   color: white;
 }
 
 a {
-  color: #cc1616;
+  color: var(--main);
   text-decoration: none;
 }
 
 a:hover {
-  color: #e82d2d;
+  color: var(--sec);
   text-decoration: none;
 }
 
@@ -53,7 +58,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #cc1616;
+  background: var(--main);
   width: 40px;
   height: 40px;
   transition: all 0.4s;
@@ -66,7 +71,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #e72323;
+  background: var(--sec);
   color: #fff;
 }
 
@@ -91,7 +96,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #cc1616;
+  border: 6px solid var(--main);
   border-top-color: #efefef;
   border-radius: 50%;
   width: 60px;
@@ -145,7 +150,7 @@ h6 {
 }
 
 #topbar .contact-info i {
-  color: #cc1616;
+  color: var(--main);
   line-height: 0;
   margin-right: 5px;
 }
@@ -251,7 +256,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  background: #cc1616;
+  background: var(--main);
 }
 
 .navbar .dropdown ul {
@@ -330,7 +335,7 @@ h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #cc1616;
+  color: var(--main);
 }
 
 @media (max-width: 991px) {
@@ -366,19 +371,10 @@ h6 {
   width: 254px;
 }
 .navbar-mobile ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  position: absolute;
-  margin-top: 54px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  padding: 12px 0;
-  overflow: hidden;
   transition: 0.3s;
-  width: 100%;
 }
 
 .navbar-mobile a,
@@ -392,7 +388,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-  color: #cc1616;
+  color: var(--main);
   background: none;
 }
 
@@ -409,8 +405,8 @@ h6 {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .navbar-mobile .dropdown ul li {
@@ -428,11 +424,19 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover > a {
-  color: #cc1616;
+  color: var(--main);
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
-  display: block;
+  display: flex;
+  margin: 0px auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.dropdown-active a {
+  display: flex !important;
+  justify-content: center !important;
 }
 
 /*--------------------------------------------------------------
@@ -485,8 +489,8 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #cc1616;
-  border-color: #cc1616;
+  background: var(--main);
+  border-color: var(--main);
 }
 
 @media (min-width: 1024px) {
@@ -599,7 +603,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cc1616;
+  color: var(--main);
 }
 
 .about .content p:last-child {
@@ -709,7 +713,7 @@ li p {
 }
 
 .icon-box-title i {
-  color: #cc1616;
+  color: var(--main);
 }
 
 .ibx-span {
@@ -727,7 +731,7 @@ li p {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #cc1616;
+  background: var(--main);
   transition: all 0.3s ease-out 0s;
   display: flex;
   align-items: center;
@@ -829,8 +833,8 @@ li p {
 }
 
 .cta .cta-btn:hover {
-  background: #cc1616;
-  border: 2px solid #cc1616;
+  background: var(--main);
+  border: 2px solid var(--main);
 }
 
 /*--------------------------------------------------------------
@@ -860,7 +864,7 @@ li p {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #e82d2d;
+  color: var(--sec);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -907,7 +911,7 @@ li p {
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #cc1616;
+  color: var(--main);
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -933,7 +937,7 @@ li p {
 }
 
 .portfolio .portfolio-item .portfolio-links a:hover {
-  color: #e82d2d;
+  color: var(--sec);
 }
 
 .portfolio .portfolio-item:hover .portfolio-info {
@@ -965,14 +969,14 @@ li p {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #cc1616;
+  border: 1px solid var(--main);
 }
 
 .portfolio-details
   .portfolio-details-slider
   .swiper-pagination
   .swiper-pagination-bullet-active {
-  background-color: #cc1616;
+  background-color: var(--main);
 }
 
 .portfolio-details .portfolio-info {
@@ -1035,7 +1039,7 @@ li p {
 
 .pricing .box h4 {
   font-size: 42px;
-  color: #cc1616;
+  color: var(--main);
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 20px;
@@ -1067,7 +1071,7 @@ li p {
 }
 
 .pricing .box ul i {
-  color: #cc1616;
+  color: var(--main);
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1083,7 +1087,7 @@ li p {
 }
 
 .pricing .box .btn-buy {
-  background: #cc1616;
+  background: var(--main);
   display: inline-block;
   padding: 10px 40px;
   color: #fff;
@@ -1096,11 +1100,11 @@ li p {
 }
 
 .pricing .box .btn-buy:hover {
-  background: #e82d2d;
+  background: var(--sec);
 }
 
 .pricing .featured {
-  background: #cc1616;
+  background: var(--main);
   box-shadow: none;
   color: #fff;
 }
@@ -1128,7 +1132,7 @@ li p {
 
 .pricing .featured .btn-buy:hover {
   background: #fff;
-  color: #cc1616;
+  color: var(--main);
 }
 
 /*--------------------------------------------------------------
@@ -1177,7 +1181,7 @@ li p {
 }
 
 .team .member .social a:hover {
-  color: #cc1616;
+  color: var(--main);
 }
 
 .team .member .social i {
@@ -1197,7 +1201,7 @@ li p {
 
 .contact .info-box i {
   font-size: 32px;
-  color: #cc1616;
+  color: var(--main);
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted #f5a0a0;
@@ -1273,7 +1277,7 @@ li p {
 
 .contact .php-email-form input::focus,
 .contact .php-email-form textarea::focus {
-  background-color: #cc1616;
+  background-color: var(--main);
 }
 
 .contact .php-email-form input {
@@ -1285,7 +1289,7 @@ li p {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #cc1616;
+  background: var(--main);
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1293,7 +1297,7 @@ li p {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #e82d2d;
+  background: var(--sec);
 }
 
 @-webkit-keyframes animate-loading {
@@ -1367,7 +1371,7 @@ li p {
   margin-bottom: 15px;
   background: #191919;
   color: #fff;
-  border-top: 4px solid #cc1616;
+  border-top: 4px solid var(--main);
   text-align: center;
   padding: 30px 20px;
 }
@@ -1403,7 +1407,7 @@ li p {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #cc1616;
+  background: var(--main);
   color: #fff;
   text-decoration: none;
 }
@@ -1477,14 +1481,14 @@ li p {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #cc1616;
+  background: var(--main);
   color: #fff;
   transition: 0.3s;
   border-radius: 4;
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #e82d2d;
+  background: var(--sec);
 }
 
 #footer .copyright {
@@ -1501,7 +1505,7 @@ li p {
 }
 
 #footer .credits a {
-  color: #e82d2d;
+  color: var(--sec);
 }
 
 .footer-gap {
@@ -1511,7 +1515,7 @@ li p {
   gap: 4em;
 }
 
-.email-sub{
+.email-sub {
   width: 50%;
 }
 
@@ -1519,7 +1523,7 @@ li p {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
-  .email-sub{
+  .email-sub {
     width: 100%;
   }
 }
@@ -1576,4 +1580,11 @@ li p {
   margin: 12px auto;
   width: 54%;
   font-size: 20px;
+}
+
+.color-picker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
