@@ -225,9 +225,6 @@
     }
   });
 
-  /**
-   * Animation on scroll
-   */
   window.addEventListener('load', () => {
     AOS.init({
       duration: 1000,
@@ -245,9 +242,7 @@ function toggleFinanciamiento(){
 }
 
 const colorInput = document.querySelector('#colorInput');
-
 colorInput.addEventListener('input', (event) => {
   const colorValue = event.target.value;
   document.documentElement.style.setProperty('--main', colorValue);
 });
-

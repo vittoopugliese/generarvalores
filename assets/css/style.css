@@ -1229,7 +1229,7 @@ li p {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: transparent;
   text-align: left;
   padding: 15px;
   font-weight: 600;
