@@ -28,16 +28,20 @@
 
 <body>
 
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center in320text">
+  <section id="topbar" class="d-flex align-items-center dataContainerfa">
+    <div class="container d-flex justify-content-center justify-content-md-between ">
+      <div class="contact-info d-flex align-items-center in320text dataContainer">
         <!-- divs -->
-        <i class="bi bi-envelope-fill"></i>
-        <a href="mailto:contacto@generarvalores.com">contacto@generarvalores.com</a>
-        <i class="bi bi-phone-fill phone-icon"></i>
-        <a href="tel:+54 11 3289 4420">+54 9 11 3289 4420</a>
+        <div class="d-flex justify-content-center align-items-center">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:contacto@generarvalores.com">contacto@generarvalores.com</a>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <i class="bi bi-phone-fill phone-icon"></i>
+          <a href="tel:+54 11 3289 4420">+54 9 11 3289 4420</a>
+        </div>
       </div>
-      <div class="social-links d-none d-md-block">
+      <div class="social-links d-none d-md-block" style="display: none;">
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -51,46 +55,23 @@
 
       <a href="index.html" class="logo"><img src="./assets/img/logo.png" alt="image-logo" class="img-fluid"></a>
 
-      <!-- <nav id="navbar" class="navbar">
-        <ul>
-          <li><a style="color: white !important;" class="nav-link scrollto " href="#team">Nosotros</a></li>
-          <li><a style="color: white !important;" class="nav-link scrollto" href="#services">Asesoramiento
-              Financiero</a></li>
-          <li class="dropdown scrollto">
-            <a href="#services" class="d-flex justify-content-between align-items-center">
-              <span>Asesoramiento Juridico</span>
-              <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#services">Laboral</a></li>
-              <li><a href="#services">Empresarial</a></li>
-            </ul>
-          </li>
-          <li><a style="color: white !important;" class="nav-link scrollto" href="#contact">Contacto</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav> -->
-
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a style="color: white !important;" class="nav-link scrollto " href="#team">Nosotros</a></li>
+          <li><a style="color: white !important;" class="nav-link scrollto " href="#team" onclick="closeNav()">Nosotros</a></li>
           <li class="dropdown scrollto">
             <a class="d-flex justify-content-between align-items-center">
               <span>Asesoramiento</span>
               <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#services">Financiero</a></li>
-              <li><a href="#services">Juridico</a></li>
+              <li onclick="closeNav()"><a href="#services" onclick="closeNav()">Financiero</a></li>
+              <li onclick="closeNav()"><a href="#services2" onclick="closeNav()">Juridico</a></li>
             </ul>
           </li>
-          <li><a style="color: white !important;" class="nav-link scrollto" href="#contact">Contacto</a></li>
+          <li><a style="color: white !important;" class="nav-link scrollto" href="#contact" onclick="closeNav()">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
 
-    </div>
-
-    <div class="color-picker">
-      <input type="color" id="colorInput">
     </div>
   </header>
 
@@ -99,8 +80,7 @@
       <h1>CONSULTORÍA FINANCIERA Y JURÍDICA</h1>
       <!-- <p style="color: white !important;">Empresas y Personas Particulares</p> -->
       <div class="wi75gen">
-        <h2>Nuestros clientes reciben asesoramiento que los ayuda a tomar mejores decisiones en base a objetividad
-          analítica, espíritu crítico y trabajo reflexivo.</h2>
+        <h2>Nuestros clientes reciben asesoramiento que los ayuda a tomar mejores decisiones en base a experiencia profesional, compromiso y dedicación.</h2>
       </div>
       <a href="#about" class="btn-get-started scrollto">Saber más</a>
     </div>
@@ -115,8 +95,7 @@
             <img src="./assets/img/about.jpg" class="img-fluid w-75">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3> Somos un grupo de profesionales dedicados a la excelencia en la consultoría financiera que brinda una
-              amplia gama de servicios para mejorar la gestión de su empresa y de inversores particulares.</h3>
+            <h3> Somos profesionales dedicados a la excelencia en la consultoría legal y financiera que brinda servicios para mejorar el desarrollo y la productividad de la empresa y de inversores particulares.</h3>
             <ul style="margin-top: 32px;">
               <li><i class="bi bi-check-circle"></i>
                 Asesoramiento Financiero
@@ -142,14 +121,13 @@
       <div class="container">
 
         <div class="section-title">
-          <span>Equipo</span>
-          <h2>Equipo</h2>
-          <p>Responsables del éxito empresarial de nuestros clientes</p>
+          <span>NOSOTROS</span>
+          <h2>NOSOTROS</h2>
         </div>
 
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-            <div class="member" style="padding: 40px 20px;">
+            <div class="member" style="padding: 70px 20px;">
               <img src="./assets/img/team/team_1.jpeg" alt="team person" draggable="false">
               <h4>Gustavo Varela</h4>
               <p style="text-align: left;">27 años de trayectoria en asesoramiento financiero y administración de
@@ -162,10 +140,7 @@
             <div class="member">
               <img src="./assets/img/team/team_2.jpeg" alt="team person" draggable="false">
               <h4>María Carolina Martínez</h4>
-              <p style="text-align: left;">15 años de experiencia en asesoramiento de empresas, representación judicial,
-                acuerdos en SeCLO, en negociación individual y colectiva. <br> Abogada graduada del Instituto
-                Universitario de la Policía Federal Argentina y posee Posgrado en Derecho del trabajo realizado en la
-                Universidad de Buenos Aires.
+              <p style="text-align: left;">15 años de experiencia en asesoramiento de empresas, representación judicial y acuerdos en SeCLO, en el ámbito de CABA y PBA. Vasta experiencia en negociación individual y colectiva. Abogada graduada en el Instituto Universitario de la Policía Federal Argentina que posee posgrado en Derecho del Trabajo realizado en la UBA, y Especialización en la misma materia realizada en un Seminario dictado por distintos Colegios de Abogados de la Provincia de Buenos Aires en conjunto.
               </p>
             </div>
           </div>
@@ -327,7 +302,7 @@
 
         </div>
 
-        <div class="section-title" style="margin-top: 60px;">
+        <div id="services2" class="section-title" style="margin-top: 60px;">
           <h2>ASESORAMIENTO JURÍDICO</h2>
         </div>
 
@@ -337,84 +312,49 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4>
-                <a>Empresas </a>
+                <a>Empresas</a>
               </h4>
               <ul style="list-style: none; padding: 0px;">
 
                 <li>
                   <div class="icon-box-title">
                     <i class="bi bi-check-circle"></i>
-                    <p>Respuesta de telegramas </p>
+                    <p>Redacción de cartas documento</p>
                   </div>
                 </li>
 
                 <li>
                   <div class="icon-box-title">
                     <i class="bi bi-check-circle"></i>
-                    <p>Contestación de demanda </p>
+                    <p>Negociación individual</p>
                   </div>
                 </li>
 
                 <li>
                   <div class="icon-box-title">
                     <i class="bi bi-check-circle"></i>
-                    <p>Derecho del Trabajo </p>
+                    <p>Negociación colectiva</p>
                   </div>
                 </li>
 
                 <li>
                   <div class="icon-box-title">
                     <i class="bi bi-check-circle"></i>
-                    <p>Derecho Empresarial </p>
+                    <p>Plan de tratamiento de personal</p>
                   </div>
                 </li>
 
                 <li>
                   <div class="icon-box-title">
                     <i class="bi bi-check-circle"></i>
-                    <p>Derecho Colectivo </p>
+                    <p>Negociación en SeCLO</p>
                   </div>
                 </li>
 
                 <li>
                   <div class="icon-box-title">
                     <i class="bi bi-check-circle"></i>
-                    <p>Derecho Individual </p>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="icon-box-title">
-                    <i class="bi bi-check-circle"></i>
-                    <p>Plan de tratamiento de personal </p>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="icon-box-title">
-                    <i class="bi bi-check-circle"></i>
-                    <p>Estudio de situación empresarial </p>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="icon-box-title">
-                    <i class="bi bi-check-circle"></i>
-                    <p>Negociación en SECLO</p>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="icon-box-title">
-                    <i class="bi bi-check-circle"></i>
-                    <p>Análisis de situación de causas judiciales </p>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="icon-box-title">
-                    <i class="bi bi-check-circle"></i>
-                    <p>Prevención y tácticas en juicios laborales </p>
+                    <p>Prevención, análisis y proyección de causas judiciales</p>
                   </div>
                 </li>
 
@@ -481,14 +421,6 @@
                   </div>
                 </li>
 
-                <li>
-                  <div class="icon-box-title">
-                    <i class="bi bi-check-circle"></i>
-                    <p> Defensa de distintos aspectos del vínculo
-                    </p>
-                  </div>
-                </li>
-
               </ul>
             </div>
           </div>
@@ -520,15 +452,7 @@
           <p>Si tenes alguna duda o queres contactar con nosotros:</p>
         </div>
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-6">
-            <div class="info-box mb-4">
-              <i class="bx bx-map"></i>
-              <h3>Nuestra ubicacion:</h3>
-              <p>Av. 9 de Julio, CP 1043 CABA</p>
-            </div>
-          </div>
-
+        <div class="row justify-content-center" data-aos="fade-up">
           <div class="col-lg-3 col-md-6">
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
@@ -544,18 +468,9 @@
               <p>+54 11 3289 4420</p>
             </div>
           </div>
-
         </div>
 
-        <div class="row" data-aos="fade-up">
-
-          <div class="col-lg-6 ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.94399080977!2d-58.38391434897387!3d-34.605577780363106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacfdd1fa037%3A0xf1b1f26b0eab3053!2sAv.%209%20de%20Julio%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1677621022567!5m2!1ses!2sar"
-              frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
+        <div class="row justify-content-center" data-aos="fade-up">
           <div class="col-lg-6">
             <form action="https://formsubmit.co/a5c1e206ca37ab24130122d824b43c22"
              role="form" class="php-email-form" method="POST">

@@ -241,6 +241,11 @@ function toggleFinanciamiento(){
   f.classList.toggle('ul-hidden')
 }
 
+function closeNav(){
+  const f = document.querySelector('#ul-to-hide')
+  f.classList.remove('ul-hidden')
+}
+
 const colorInput = document.querySelector('#colorInput');
 colorInput.addEventListener('input', (event) => {
   const colorValue = event.target.value;

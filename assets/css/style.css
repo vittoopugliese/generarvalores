@@ -4,8 +4,8 @@ body {
 }
 
 :root {
-  --main: #cc1616;
-  --sec: #cc1616;
+  --main: #3cc05d;
+  --sec: #5abe73;
 }
 
 *::selection {
@@ -759,7 +759,7 @@ li p {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: #fce5e5;
+  background: #e5fce6;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -1204,7 +1204,7 @@ li p {
   color: var(--main);
   border-radius: 50%;
   padding: 8px;
-  border: 2px dotted #f5a0a0;
+  border: 2px dotted #8af0ba;
 }
 
 .contact .info-box h3 {
@@ -1587,4 +1587,22 @@ li p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 454px) {
+  .dataContainer{
+    flex-direction: column-reverse !important;
+    display: flex;
+    gap: 1em;
+  }
+  .dataContainerfa{
+    height: 74px !important;
+  }
+}
+@media (max-width: 374px) {
+  .dataContainer{
+    scale: 1.3;
+  }
+
 }
